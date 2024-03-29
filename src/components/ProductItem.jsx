@@ -50,7 +50,7 @@ const ProductItem = ({ product, onAddToCart }) => {
             <button
               type="button"
               className="text-[#4C52C4] disabled:text-[#C0C0C0]"
-              disabled={quantity < 1}
+              disabled={quantity <= 1}
               onClick={handleCartQuantityMinus}
             >
               <FaMinus />
