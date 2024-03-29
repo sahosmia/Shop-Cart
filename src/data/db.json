@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Water, 500 ml",
+      "price": 600,
+      "discountPercentage": 40,
+      "image": "https://cdn.dummyjson.com/product-images/99/thumbnail.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Beauty Serum",
+      "price": 500,
+      "discountPercentage": null,
+      "image": "https://cdn.dummyjson.com/product-images/73/thumbnail.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Tree Oil 30ml",
+      "price": 480,
+      "discountPercentage": 40,
+      "image": "https://cdn.dummyjson.com/product-images/18/thumbnail.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Cream, 700 ml",
+      "price": 900,
+      "discountPercentage": null,
+      "image": "https://cdn.dummyjson.com/product-images/18/1.jpg"
+    }
+  ]
+}
