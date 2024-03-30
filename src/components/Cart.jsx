@@ -1,8 +1,6 @@
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 const Cart = ({ cart }) => {
-
-
   const total = cart.reduce((total, product) => {
     const discountedPrice =
       product.discountPercentage !== null
@@ -10,7 +8,7 @@ const Cart = ({ cart }) => {
         : product.price;
 
     const productTotalPrice = discountedPrice * product.quantity;
-    
+
     return total + productTotalPrice;
   }, 0);
 
@@ -23,7 +21,7 @@ const Cart = ({ cart }) => {
         <span className="roboto-medium text-sm">In your cart</span>
       </div>
       <div className="flex gap-1 items-center">
-        <span className="roboto-bold"> ₹{total}</span>
+        <span className="roboto-bold"> ₹{parseInt(total)}</span>
         <button type="button" className="text-2xl">
           <MdKeyboardArrowRight />
         </button>

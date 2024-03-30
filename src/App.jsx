@@ -23,9 +23,10 @@ function App() {
     const fetchProducts = async () => {
       try {
         setLoading(true);
-        const response = await api.get(`products?q=${search}`);
+        const response = await api.get(`products/search?q=${search}&&limit=4`);
         if (isMounted) {
-          setProducts(response.data);
+          console.log(response.data.products);
+          setProducts(response.data.products);
         }
       } catch (error) {
         console.log(error.message);

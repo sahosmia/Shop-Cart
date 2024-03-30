@@ -24,7 +24,7 @@ const ProductItem = ({ product, onAddToCart }) => {
   return (
     <div className="rounded-xl shadow-lg overflow-hidden">
       <img
-        src={product.image}
+        src={product.thumbnail}
         alt={product.title}
         className="h-[154px] w-full object-cover"
       />
@@ -37,7 +37,10 @@ const ProductItem = ({ product, onAddToCart }) => {
                 ₹{product.price}
               </span>
               <span className="text-[#666666]">
-                ₹{product.price * (1 - product.discountPercentage / 100)}
+                ₹
+                {parseInt(
+                  product.price * (1 - product.discountPercentage / 100)
+                )}
               </span>
             </>
           ) : (
@@ -82,7 +85,7 @@ ProductItem.propTypes = {
   onAddToCart: PropTypes.any,
   product: PropTypes.shape({
     discountPercentage: PropTypes.number,
-    image: PropTypes.string,
+    thumbnail: PropTypes.string,
     price: PropTypes.number,
     title: PropTypes.string,
   }),
